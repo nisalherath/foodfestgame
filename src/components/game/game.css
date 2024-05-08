@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+:root{
+
+--button-color:rgb(89, 21, 121);
+--button-hover:rgb(102, 10, 67);
+
+--color:rgb(250, 199, 255);
+
+--button-font-size:25px;
+
+--text-color:rgb(255, 255, 135);
+--timing-for-buttons:300ms;
+--navbar-width:250px;
+--timing: 600ms;
+--jump-height: 30px;
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100svh;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto; 
+    height: auto; 
+  }
+
+#board {
+    border-radius: 0px;
+
+}
+
+
+.game-container {
+    position: relative;
+  }
+  
+  .game-overlay {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 50;
+    background-color: transparent;
+  }
+
+
+.game-button {
+    background-color: var(--button-color);
+    padding: 10px 20px;
+    margin-top: 10svh;
+    margin-right: 0px;
+    /*border-radius: 15px 5px 15px 5px;*/
+    cursor: pointer;
+    transition: var(--timing-for-buttons);
+    border: 1px solid transparent;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+    width: 150px;
+    aspect-ratio: 1;
+  --g:/20.56% 20.56% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
+  mask: 100% 50% var(--g),93.301% 75% var(--g),75% 93.301% var(--g),50% 100% var(--g),25% 93.301% var(--g),6.699% 75% var(--g),0% 50% var(--g),6.699% 25% var(--g),25% 6.699% var(--g),50% 0% var(--g),75% 6.699% var(--g),93.301% 25% var(--g),radial-gradient(100% 100%,#000 38.366%,#0000 calc(38.366% + 1px));
+
+  }
+
+  .game-button::before {
+    position: absolute;
+    content: "Start Game🌭";
+    color: var(--text-color);
+    font-size: var(--button-font-size);
+    font-family: 'poppins';
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+  
+  .game-button:hover {
+    background-color: var(--button-hover);
+    color: #ffffff;
+    border: 1px dashed transparent;
+    transition: var(--timing-for-buttons);
+  }
+  
+  .game-button{
+    transition: transform 0.2s, background-color 0.2s, color 0.2s; /* Add transition for smooth scaling and color change */
+  }
+  
+  .game-button:active {
+    transform: scale(0.7) rotate(720deg); /* Scale down slightly when clicked */
+  }
+
+  .game-button:active::before {
+    transform: scale(0) rotate(720deg); /* Remove rotation transformation from pseudo-element when button is active */
+  }
+
+

@@ -1,0 +1,871 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+:root{
+
+   --background-color: rgb(53, 53, 53);
+   --background-color2: rgb(44, 44, 44);
+   --secondary-color:rgb(255, 255, 255);
+ 
+   --secondary-color2:rgb(209, 194, 118);
+ 
+   --title-font-weight:400;
+ 
+
+   --alert-button-color:rgb(216, 106, 106);
+   --alert-button-hover:rgb(248, 163, 163);
+   --alert-button-border-color:black;
+   --alert-bg-color:rgba(255, 255, 255, 0.8);
+   --alert-border-color-button:rgb(216, 106, 106);
+   --alert-border-color:transparent;
+
+   --input-bg-color1-:rgb(253, 175, 175);
+   --input-bg-color2-:rgb(255, 222, 222);
+
+
+    --font-family:'poppins';
+
+    --timing-for-buttons:300ms;
+    --navbar-width:250px;
+    --timing: 600ms;
+    --jump-height: 30px;
+
+    --dot-width: 25px;
+    --dot-height: 25px;
+    --dot-1-color: rgb(255, 240, 154);
+    --dot-2-color: rgb(255, 240, 154);
+    --dot-3-color: rgb(255, 240, 154);
+    --dot-4-color: rgb(255, 240, 154);
+
+    --alert-font-size:15px;
+    --alert-font-color:rgb(34, 39, 63);
+
+    --input-width-mobile:280px;
+    --input-width-tablet:400px;
+    --input-width-pc:450px;
+
+    --input-height-mobile:20px;
+    --input-height-tablet:30px;
+    --input-height-pc:40px;
+
+    --input-width-mobile-select:100px;
+    --input-width-tablet-select:200px;
+    --input-width-pc-select:250px;
+
+    --input-height-mobile-select:auto;
+    --input-height-tablet-select:auto;
+    --input-height-pc-select:auto;
+
+    --input-margin-mobile:60px;
+    --input-margin-tablet:50px;
+    --input-margin-pc:40px;
+
+
+    --title-size-mobile:25px;
+    --title-size-tablet:35px;
+    --title-size-pc:45px;
+    
+    --label-text-size-mobile:12px;
+    --label-text-size-tablet:18px;
+    --label-text-size-pc:20px;
+
+    --input-text-size-mobile:10px;
+    --input-text-size-tablet:15px;
+    --input-text-size-pc:15px;
+
+
+
+    --gamepage-color:rgb(211, 132, 132);
+
+
+}
+body::-webkit-scrollbar {
+  width: 0; /* This will hide the scrollbar */
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100svh;
+    background-color: var(--input-bg-color1-);
+    position: relative;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.gamepage {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  text-align: center;
+  align-items: center; 
+  background-color: var(--gamepage-color);
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 100vh; 
+}
+
+.gamepage > * {
+  flex: 1; 
+}
+
+
+
+
+* {
+  -webkit-tap-highretro-color: transparent;
+}
+
+*:focus {
+  outline: none;
+}
+
+
+
+
+
+.nickform{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+  border-radius: 15px;
+  border: 5px dashed transparent;
+  background-color: rgb(250, 143, 143);
+  box-shadow: 0px 5px 15px rgba(78, 0, 0, 0.5);
+}
+
+.formpic {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
+  margin: 15px;
+  border: 5px solid transparent; 
+  background: linear-gradient(to bottom right, 
+    rgb(240, 68, 68) 10%, rgb(255, 123, 0) 20%, rgb(236, 236, 122) 30%, rgb(55, 139, 97) 40%, rgb(62, 62, 148) 50%, rgb(175, 78, 245) 60%, rgb(255, 198, 255) 80%, rgb(255, 85, 85) 90%);
+  background-size: 200% 200%;
+  animation: rainbowBorder 3s linear infinite; /* Animation for the rainbow border */
+}
+
+
+.formpic2 {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
+  margin: 0px;
+  border: 3px solid transparent; 
+  background: linear-gradient(to bottom right, 
+    rgb(240, 68, 68) 10%, rgb(255, 123, 0) 20%, rgb(236, 236, 122) 30%, rgb(55, 139, 97) 40%, rgb(62, 62, 148) 50%, rgb(175, 78, 245) 60%, rgb(255, 198, 255) 80%, rgb(255, 85, 85) 90%);
+  background-size: 200% 200%;
+  animation: rainbowBorder 3s linear infinite; /* Animation for the rainbow border */
+}
+
+@keyframes rainbowBorder {
+  0% {
+    background-position: 10% 10%; /* Start the animation from the top-left corner */
+  }
+  14.28% {
+    background-position: 20% 20%; /* Move the background slightly */
+  }
+  28.57% {
+    background-position: 50% 50%; /* Move the background slightly */
+  }
+  42.85% {
+    background-position: 60% 60%; /* Move the background slightly */
+  }
+  57.14% {
+    background-position: 50% 50%; /* Move the background slightly */
+  }
+  71.42% {
+    background-position: 40% 40%; /* Move the background slightly */
+  }
+  85.71% {
+    background-position: 20% 20%; /* Move the background slightly */
+  }
+  100% {
+    background-position: 10% 10%; /* Move the background to the bottom-right corner */
+  }
+}
+
+
+
+
+
+
+
+
+  /* Style for the input fields */
+  input{
+    margin-bottom: 1rem;
+  }
+
+  input{
+    width: 80%;
+    padding: 0.5rem;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: var(--input-bg-color1-);
+  }
+
+  input:focus{
+    background-color: var(--input-bg-color2-);
+    border: 1px solid rgb(255, 107, 107);
+  }
+  
+  #nname{
+    font-family: var(--font-family);
+    font-weight: 200;
+    color: var(--alert-bg-color);
+    margin: 0;
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
+
+
+  #nicknameTitle,
+  #sure{
+    font-family: var(--font-family);
+    font-weight: 200;
+    color: black;
+    margin: 0;
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+
+
+  .nickname-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    font-family: 'poppins';
+    color: rgb(74, 72, 155);
+    font-weight: 500;
+    pointer-events: none;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 244, 147);
+    box-shadow: 0px 5px 5px rgba(139, 63, 63, 0.5);
+  }
+
+
+.note{
+  font-family: 'poppins';
+  color: rgb(255, 216, 216);
+  font-weight: 400;
+  pointer-events: none;
+  border-radius: 15px 5px 15px 5px;
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+  width: 350px;
+}
+
+
+.nickname-message{
+  font-family: 'poppins';
+  color: rgb(63, 72, 121);
+  font-weight: 400;
+  pointer-events: none;
+  font-size: 14px;
+  text-align: center;
+}
+
+.nickname-message2{
+  font-family: 'poppins';
+  color: rgb(63, 72, 121);
+  font-weight: 400;
+  pointer-events: none;
+  font-size: 14px;
+  text-align: center;
+  text-shadow: 0px 5px 5px rgba(139, 63, 63, 0.5);
+}
+
+.note2{
+  font-family: 'poppins';
+  color: rgb(72, 78, 129);
+  font-weight: 400;
+  pointer-events: none;
+  border-radius: 15px 5px 15px 5px;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 0px;
+  padding: 5px;
+  width: auto;
+}
+.note9{
+  font-family: 'poppins';
+  color: rgb(72, 78, 129);
+  font-weight: 400;
+  border-radius: 15px 5px 15px 5px;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 0px;
+  padding: 5px;
+  width: 350px;
+}
+.note3{
+  font-family: 'poppins';
+  color: rgb(189, 68, 68);
+  font-weight: 400;
+  pointer-events: none;
+  border-radius: 15px 5px 15px 5px;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 0px;
+  padding: 5px;
+  width: 350px;
+}
+
+
+
+#submitbtn button {
+  position: relative;
+  align-items: center;
+  justify-self: center;
+  background-color: var(--alert-button-color);
+  color: rgb(255, 216, 216);
+  font-size: var(--alert-font-size) ;
+  border-radius: 5px 25px 5px 25px;
+  cursor: pointer;
+  transition: 0.2s;
+  width: 100px;
+  font-family: var(--font-family);
+  padding: 10px;
+  border:3px solid transparent ;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+#submitbtn button:focus{
+  outline: none;
+}
+
+#submitbtn button{
+transition: transform 0.2s, background-color 0.2s, color 0.2s; /* Add transition for smooth scaling and color change */
+}
+
+#submitbtn button:active {
+transform: scale(0.7); /* Scale down slightly when clicked */
+}
+
+
+#submitbtn button:hover {
+background-color: rgb(216, 70, 70);
+transition: var(--timing-for-buttons);
+border:3px solid transparent;
+color: rgb(255, 255, 255);
+}
+
+
+
+.clearcookie-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  bottom: 0;
+  margin-top: 0px;
+  background-color: rgb(184, 90, 90);
+  width: 100%;
+  padding: 30px;
+}
+
+.note7{
+  font-family: 'poppins';
+  color: rgb(255, 195, 195);
+  font-weight: 400;
+  pointer-events: none;
+  border-radius: 15px 5px 15px 5px;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 0px;
+  padding: 5px;
+  width: 350px;
+}
+
+.note8{
+  margin-top: 50px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-family: 'poppins';
+  color: rgb(255, 195, 195);
+  font-weight: 100;
+  border-radius: 15px 5px 15px 5px;
+  font-size: 8px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.note8 a{
+  font-family: 'poppins';
+  color: rgb(255, 195, 195);
+  font-weight: 100;
+  border-radius: 15px 5px 15px 5px;
+  font-size: 8px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.clear-cookies-btn {
+  background-color: rgb(167, 52, 52);
+  color: var(--text-color);
+  font-size: 12px;
+  font-family: 'poppins';
+  padding: 10px 20px;
+  border-radius: 75px 5px 75px 5px;
+  cursor: pointer;
+  transition: var(--timing-for-buttons);
+  border: 1px solid transparent;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
+  width: auto;
+  outline: none;
+}
+
+.clear-cookies-btn:hover {
+  background-color: var(--button-hover);
+  color: #ffffff;
+  border: 1px dashed transparent;
+  transition: var(--timing-for-buttons);
+}
+
+.clear-cookies-btn{
+  transition: transform 0.2s, background-color 0.2s, color 0.2s; /* Add transition for smooth scaling and color change */
+}
+
+.clear-cookies-btn:active {
+  transform: scale(0.7); /* Scale down slightly when clicked */
+}
+
+
+
+
+
+.alert1-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(117, 57, 57, 0.8); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.alert1 {
+  background-color:  rgba(255, 248, 167, 0.8);
+  color: black;
+  font-size: var(--alert-font-size);
+  text-align:start;
+  padding: 20px;
+  border-radius: 0px;
+  border: 3px solid var(--alert-border-color);
+  z-index: 99999;
+  max-width: 80svw;
+  font-family: var(--font-family);
+  --mask: 
+  linear-gradient(#000 0 0) 50%/calc(100% - 18.5px) calc(100% - 18.5px) no-repeat,
+  radial-gradient(farthest-side,#000 98%,#0000) 0 0/20px 20px round;
+-webkit-mask: var(--mask);
+        mask: var(--mask);
+}
+
+.alert1 button {
+    position: relative;
+    align-items: center;
+    justify-self: center;
+    background-color: var(--alert-button-color);
+    color: var(--secondary-color);
+    font-size: var(--alert-font-size) ;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 100px;
+    margin-right: 20px;
+    font-family: var(--font-family);
+    padding: 10px;
+    border:3px solid var(--alert-border-color);
+    margin-top: 25px;
+}
+
+.note5{
+  font-family: 'poppins';
+  color: rgb(72, 78, 129);
+  font-weight: 400;
+  pointer-events: none;
+  border-radius: 15px 5px 15px 5px;
+  font-size: 14px;
+  margin-top: 0px;
+  padding: 5px;
+  width: auto;
+}
+
+.note6{
+  font-family: 'poppins';
+  color: rgb(189, 68, 68);
+  font-weight: 400;
+  pointer-events: none;
+  border-radius: 15px 5px 15px 5px;
+  font-size: 14px;
+  margin-top: 0px;
+  padding: 5px;
+  width: auto;
+}
+
+.note10{
+  font-family: 'poppins';
+  color: rgb(72, 78, 129);
+  font-weight: 400;
+  pointer-events: none;
+  border-radius: 15px 5px 15px 5px;
+  font-size: 14px;
+  margin-top: 0px;
+  padding: 5px;
+  width: auto;
+}
+
+
+.alert1 button:focus{
+    outline: none;
+}
+
+.alert1 button{
+  transition: transform 0.2s, background-color 0.2s, color 0.2s; /* Add transition for smooth scaling and color change */
+}
+
+.alert1 button:active {
+  transform: scale(0.7); /* Scale down slightly when clicked */
+}
+
+.alert1 button:hover {
+  background-color: var(--alert-button-hover);
+  transition: var(--timing-for-buttons);
+  border:3px solid transparent;
+  color: white;
+}
+
+
+
+
+
+
+
+.alert2-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(63, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.alert2 {
+  background-color:  rgba(255, 248, 167, 0.8);
+  color: black;
+  font-size: var(--alert-font-size);
+  text-align:start;
+  padding: 20px;
+  border-radius: 20px;
+  border: 3px solid var(--alert-border-color);
+  z-index: 99999;
+  width: 300px;
+  font-family: var(--font-family);
+
+}
+
+.alert2 button {
+    position: relative;
+    align-items: center;
+    justify-self: center;
+    background-color: rgb(83, 83, 83);
+    color: var(--secondary-color);
+    font-size: var(--alert-font-size) ;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 100px;
+    margin-right: 20px;
+    font-family: var(--font-family);
+    padding: 10px;
+    border:3px solid var(--alert-border-color);
+    margin-top: 25px;
+}
+
+#yesbtn{
+  background-color: rgb(185, 87, 87);
+}
+
+#yesbtn:hover {
+  background-color: rgb(139, 56, 56);
+}
+
+
+.alert2 button:focus{
+    outline: none;
+}
+
+.alert2 button{
+  transition: transform 0.2s, background-color 0.2s, color 0.2s; /* Add transition for smooth scaling and color change */
+}
+
+.alert2 button:active {
+  transform: scale(0.7); /* Scale down slightly when clicked */
+}
+
+.alert2 button:hover {
+  background-color: rgb(43, 43, 43);
+  transition: var(--timing-for-buttons);
+  border:3px solid transparent;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+.alert3-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(117, 57, 57, 0.8); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.alert3 {
+  background-color:  rgba(255, 248, 167, 0.8);
+  color: black;
+  font-size: var(--alert-font-size);
+  text-align:start;
+  padding: 20px;
+  border-radius: 0px;
+  border: 3px solid var(--alert-border-color);
+  z-index: 99999;
+  max-width: 80svw;
+  font-family: var(--font-family);
+  --mask: 
+  linear-gradient(#000 0 0) 50%/calc(100% - 18.5px) calc(100% - 18.5px) no-repeat,
+  radial-gradient(farthest-side,#000 98%,#0000) 0 0/20px 20px round;
+-webkit-mask: var(--mask);
+        mask: var(--mask);
+}
+
+.alert3 button {
+    position: relative;
+    align-items: center;
+    justify-self: center;
+    background-color: var(--alert-button-color);
+    color: var(--secondary-color);
+    font-size: var(--alert-font-size) ;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 100px;
+    margin-right: 20px;
+    font-family: var(--font-family);
+    padding: 10px;
+    border:3px solid var(--alert-border-color);
+    margin-top: 25px;
+    width: 100px;
+    aspect-ratio: 1;
+    --g:/27.676% 27.676% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
+    mask: 100% 50% var(--g),85.355% 85.355% var(--g),50% 100% var(--g),14.645% 85.355% var(--g),0% 50% var(--g),14.645% 14.645% var(--g),50% 0% var(--g),85.355% 14.645% var(--g),radial-gradient(100% 100%,#000 33.409%,#0000 calc(33.409% + 1px));
+}
+
+.alert3 button:focus{
+  outline: none;
+}
+
+.alert3 button{
+transition: transform 0.2s, background-color 0.2s, color 0.2s; /* Add transition for smooth scaling and color change */
+}
+
+.alert3 button:active {
+transform: scale(0.7) rotate(360deg); /* Scale down slightly when clicked */
+}
+
+.alert3 button:hover {
+background-color: rgb(201, 57, 57);
+transition: var(--timing-for-buttons);
+border:3px solid transparent;
+color: white;
+}
+
+.letsgo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+  /*loading*/
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(117, 57, 57, 0.8); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999; 
+}
+
+.loading-dots{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.dot-1,
+.dot-2,
+.dot-3,
+.dot-4{
+  position: relative;
+    content: '';
+    height: var(--dot-height);
+    width: var(--dot-width);
+    border-radius: 50%;
+    animation: jumping-dots 2s cubic-bezier(0.55, 1.55, 0.55, 1.55) infinite;
+    filter:drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.3));
+    transition: var(--timing);
+}
+
+.dot-1::before,
+.dot-2::before,
+.dot-3::before,
+.dot-4::before {
+    content: '🌭';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border-radius: 50%;  
+    font-size:var(--title-size-pc);
+}
+
+
+.dot-1{
+    background-color: transparent;
+}
+
+.dot-2{
+    background-color: transparent;
+    animation-delay: .25s;
+}
+
+.dot-3{
+    background-color: transparent;
+    animation-delay: .5s;
+}
+
+.dot-4{
+    background-color: transparent;
+    animation-delay: .75s;
+}
+
+
+@keyframes jumping-dots {
+    0%,50%,75%,100%{
+        transform: translateY(0);
+      }
+      25% {
+        transform: translateY(calc(var(--jump-height) * -1));
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media only screen and (max-width: 767px){
+      * {
+        -webkit-tap-highretro-color: transparent;
+      }
+      
+      *:focus {
+        outline: none;
+      }
+    
+      .gamepage{
+        width: 100svw;
+        overflow: hidden;
+        padding: 0px;
+        padding-bottom: 0px;
+        margin: 0;
+      }
+
+      
+  
+    }
+    
+    
+    @media (min-width: 768px) and (max-width: 1023px){
+      * {
+        -webkit-tap-highretro-color: transparent;
+      }
+      
+      *:focus {
+        outline: none;
+      }
+      
+    
+    }
+  
